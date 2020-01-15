@@ -1,0 +1,29 @@
+﻿@model MVCExample.Models.Person
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Index13</title>
+</head>
+<body>
+    <h2>With Post And Model</h2>
+    @using (Html.BeginForm())
+    {
+        <p>Name</p>
+        @Html.TextBoxFor(model => model.Name)
+        <p>Age</p>
+        @Html.TextBoxFor(model => model.Age)
+        <p>Region</p>
+        @Html.TextBoxFor(model => model.Region)
+        <p>Sex</p>
+        @Html.TextBoxFor(model => model.Sex)
+        <br />
+        <input type="submit" value="submit" />
+    }
+</body>
+</html>

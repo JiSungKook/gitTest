@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <h1>ASP.NET MVC</h1>
+    <br />
+    우선 MVC라는 것은 많은 곳에 쓰이는 내용이랍니다.<br />
+    넓은 의미의 MVC는 지금 사용되고 있는 거의 모든 프로그램에 적용이 된답니다.<br />
+    <br />
+    <br />
+    예로 HTML만 봐도 HTML이 있고 CSS가 있고 JavaScript가 있답니다.<br />
+    HTML은 사용자에게 보여지는 View 이며 JavaScript는 그 뒤에서 그를 지원해주는 녀석입니다.<br />
+    그리고 JavaScript에서 HTML로 오가는 데이터를 Model 이라고 할 수 있겠죠.<br />
+    이는 MFC, WPF, Silverlight, ASP.NET, Windows Phone 7, Android, iPhone 등 거의 현존하는<br />
+    모든 영역에서 지원을 하는 녀석이랍니다.<br />
+    <br />
+    하지만 우리가 배우는 ASP.NET MVC3 는 직접적으로 MVC라는 명칭을 사용했답니다.<br />
+    이는 좁은 의미로 사용되는 MVC를 의미한답니다.<br />
+    M, V, C가 확실히 딱딱 나눠지는 독립된 독자적인 기능들을 가지는 것을 의미합니다.<br />
+    <br />
+    뭐, 이런 그림 많이 있는데<br />
+    있어도 뭔지 모르니 넘어가죠.<br />
+    <br />
+    <img src="Image/18_What-Is-MVC.png" /><br />
+    <br />
+    쨌건, 우리가 하는 ASP.NET MVC3 에서의 MVC는 좁은 의미의 MVC랍니다.<br />
+    서로서로가 독립적으로 작동해야지 완벽한 MVC를 구현했다고 할 수 있답니다.<br />
+    "하지만 독립적일 수는 없는 것이잖아요."<br />
+    『당연합니다. ㅇㅅㅇ, 완전히 독립적이지는 않아도 최대한 독립적이라는 것입니다.』<br />
+    <br />
+    예를 들어보지요.<br />
+    우리는 지금까지 Action과 View를 연결시켜왔습니다.<br />
+    <br />
+    <img src="Image/18_01" /><br />
+    <br />
+    그리고 ViewBag과 Model등을 통해 View로 데이터를 넣을 수 있었지요.<br />
+    <br />
+    <img src="Image/18_02" /><br />
+    <br />
+    독립적인 것이 아닌 것 처럼 보일 수 있지만<br />
+    나름 독립되었다고 볼 수도 있답니다.<br />
+    저 View가 꼭 저 Action에 붙어있을 필요가 없기 때문입니다.<br />
+    <br />
+    View라는 녀석은 정해져있는 Model을 넣으면 그녀석을 띄워주건 하는 정해진 OutPut을 내준답니다.<br />
+    즉, 액션과 뷰는 완벽하게 연결이 아닌 단지 액션이 어떤 뷰가 원하는 모델을 넣었기 때문에<br />
+    종속적인 것 처럼 보이는 것입니다.<br />
+    <br />
+    <img src="Image/18_03" /><br />
+    <br />
+    예를 들어서 어떤 뷰가 Model A를 원한다면<br />
+    액션에서 그 Model A를 View로 쏴줄 수 있다면 어떠한 액션이건<br />
+    해당 View를 사용할 수 있답니다.<br />
+    <br />
+    종속성이 ASP.NET에 비해 상당히 적으니<br />
+    재사용성은 상당히 증가할 수 있지요.<br />
+    <br />
+    <img src="Image/18_04" /><br />
+    <br />
+    <br />
+    또한 이러한 분리를 통해 독립성이 유지가 되니<br />
+    웹개발자가 Action을 설계하고 웹디자이너가 HTML과 CSS를 구성하는 것을<br />
+    매우 빠른 속도로 진행할 수 있답니다.<br />
+    <br />
+    <img src="Image/18_05" /><br />
+    <br />
+    단지 필요한 것은 웹프로그래머와 웹 디자이너가 약속을 하는 것이지요.<br />
+    <br />
+    개발자 :『이 모델 넘길거니까 이 모델을 리스트로 띄우는 것을 만들어주세요.』<br />
+    디자이너 : 『넴 !』 그리고 ViewBag도 약간의 약속을 통해 조금 더 넘길 수 있겠지요.<br />
+    <br />
+    <img src="Image/18_06" /><br />
+    <br />
+    방금 이렇게 설명은 했지만,<br />
+    방금 말한 부분에서는 Model의 역할이 그닥 크지 않았답니다.<br />
+    Part1 에서는 Model이 아닌 Controller와 View의 역할에 비중을 두고 배우기 때문이죠.<br />
+    <br />
+    따라서 Part1에서는 Model의 역할을 단지 『약속』에 국한 시킨 후<br />
+    Contoller의 Action 에서 DB를 통해 Model을 가져오고 이 Model을 View로 보냄으로써 WebBrowser에 띄우는<br />
+    아래와 같은 아주 간단한 형태의 MVC패턴을 구현할 것이랍니다. <br />
+    <br />
+    <img src="Image/18_07" /><br />
+    <br />
+    <br />
+    "뭔 개소리인가요."<br />
+    『모르시겠으면 이제 다음 강의부터 만들 것이니 너무 큰 걱정은 하지 마시기 바랍니다.』<br />
+    <br />
+    참고적으로 이 내용은 절대적인 MVC의 원리나 원칙, 이해가 아닙니다.<br />
+    단지 그냥 MVC의 한 패턴일 뿐이랍니다. <br />
+    그러니 심한 딴지는 걸지 마세용 .. !<br />
+    <br />
+    위의 것을 다음 강의부터 구현을 해볼 것입니다.<br />
+
+</body>
+</html>

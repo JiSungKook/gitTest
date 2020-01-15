@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <br />
+    <img src="Image/11_1.png" /><br />
+    <br />
+    우선 HomeController에요.<br />
+    <br />
+    <img src="Image/11_2.png" /><br />
+    <br />
+    View() 라는 메소드를 사용해주면 ActionResult를 리턴하게 되는데요.<br />
+    우선 기본적으로 자기 액션과 같은 이름의 View를 찾는답니다.<br />
+    따라서 Index라는 View를 찾게 되겠지요.<br />
+    어쨌거나, 3번째 오버라이딩된 메소드를 보시면<br />
+    다음과 같이 object Model을 넘긴답니다.<br />
+    <br />
+    MVC의 이론과 관련된 내용은 기억이 잘 안나는데 16, 17, 18강 중에 하나에서 다룬답니다.<br />
+    그 전에 살짝 모델이 무엇인지 보도록 하는 거니까요. 'ㅁ'<br />
+    부담 갖지 말고 보시기 바래요 .. !<br />
+    <br />
+    <img src="Image/11_3.png" /><br />
+    <br />
+    쨌건, Person 이라는 클래스를 만들어주었답니다.<br />
+    <br />
+    <img src="Image/11_4.png" /><br />
+    <br />
+    그리고 설정<br />
+    <br />
+    <img src="Image/11_5.png" /><br />
+    <br />
+    이제 HomeController로 와서 ListOfPerson을 만들어 줍시다.<br />
+    예전 ViewBag 때도 이와 비슷한 것을 했었지만 인텔리센스가 뜨지 않았답니다.<br />
+    "뜨건 안 뜨건 뭐가 문제인가요..?"<br />
+    『문제될 것은 없지만 개발 시간의 단축을 가져올 수 있으니 두근두근 하시고 나중에 봅시다.』<br />
+    <br />
+    <img src="Image/11_6.png" /><br />
+    <br />
+    이제 View를 만드시는데요.<br />
+    『Create a Strongly-Typed View』를 선택해주세요.<br />
+    <br />
+    그리고 대충 List 선택해줍니다.<br />
+    왜냐면 우리가 지금넘긴 모델이 List니까요<br />
+    <br />
+    <img src="Image/11_7.png" /><br />
+    <br />
+    다음과 같은 결과가 뜹니다.<br />
+    <br />
+    <img src="Image/11_8.png" /><br />
+    <br />
+    View를 보시면 약간 다른 녀석이 생겨있답니다.<br />
+    아, 소스는 조금 지운 것이랍니다. 무엇인가 막 쓰여계실거에요 .. !<br />
+    『@model IEnumerable<>』이라고 되어 계실 겁니다.<br />
+    <br />
+    Model 이라는 프로퍼티의 자료형을 IEnumerable<>로 하겠다는 겁니다.<br />
+    "어라, Model 이 어디 있는데요..?"<br />
+    <br />
+    <img src="Image/11_9.png" /><br />
+    <br />
+    요기있네요.<br />
+    <br />
+    <img src="Image/11_10.png" /><br />
+    <br />
+    이제 인텔리센스가 뜹니다.<br />
+    <br />
+    <img src="Image/11_11.png" /><br />
+    <br />
+    <img src="Image/11_12.png" /><br />
+    <br />
+    결과입니다.<br />
+    <br />
+    <img src="Image/11_13.png" /><br />
+    <br />
+    "어라, 그럼 모델은 자료형이 무조건 하나인가요?"<br />
+    『네』<br />
+    "두개 넘기고 싶으면요 .. ?"<br />
+    『ViewBag 있잖아요』<br />
+    <br />
+
+</body>
+</html>

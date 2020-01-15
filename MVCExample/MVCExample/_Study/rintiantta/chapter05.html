@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <br />
+    <img src="Image/5_0.png" /><br />
+    <br />
+    <br />
+    <img src="Image/5_1.png" /><br />
+    <br />
+    바로 소스로 와봅시다.<br />
+    오늘의 주제인 ViewData와 ViewBag은 Controller에서 View로 데이터를 넘기는 방법 중에 하나랍니다. <br />
+    <br />
+    <img src="Image/5_2.png" /><br />
+    <br />
+    쨌건, 사용방법은 다음과 같습니다.<br />
+    "음... 뭐죠.. ViewData나 ViewBag에 FromViewData 라는 내용이 있는 것인가요 .. ?"<br />
+    『아뇨, 그렇지 않습니다.』<br />
+    <br />
+    <br />
+    우리가 지금 동적으로 만들어준 것이랍니다.<br />
+    즉, FromViewData가 아니라 ASD 라고 만드셔도 된다는 얘기랍니다. ㅇㅁㅇ ㅎㅎ<br />
+    <br />
+    <img src="Image/5_3.png" /><br />
+    <br />
+    그리고 View 에서는 불러주면됩니다. <br />
+    다만, 오타에 주의하도록 해주세요 .. !<br />
+    인텔리센스가 뜨지 않으니까요 ㅎㅎ<br />
+    <br />
+    <img src="Image/5_4.png" /><br />
+    <br />
+    실행결과입니다.<br />
+    『Controller -> View』로 데이터 전송이 일어난 것을 보실 수 있으실 거랍니다.<br />
+    <br />
+    <img src="Image/5_5.png" /><br />
+    <br />
+    그럼 이번에는 간단한 Person 이라는 클래스를 만들어보았어요.<br />
+    <br />
+    <img src="Image/5_6.png" /><br />
+    <br />
+    그리고 뭐<br />
+    이래이래 써주었답니다.<br />
+    <br />
+    참고적으로 Person 이라는 클래스도 public 으로 설정해주시는 것이 더 좋기는 하답니다.<br />
+    쨌건, Person으로 List를 만들어서 넘겨주었답니다.<br />
+    <br />
+    <img src="Image/5_7.png" /><br />
+    <br />
+    그리고<br />
+    foreach를 사용해서 반복을 돌릴 것인데요.<br />
+    "으... 으?!"<br />
+    『...!!』<br />
+    "인텔리센스가 안 떠요."<br />
+    『네 안뜹니다. ㅇㅁㅇ ... 충격적사태라고 할 수 있겠지요.』<br />
+    <br />
+    <img src="Image/5_8.png" /><br />
+    <br />
+    하지만 그냥 써주셔도 문제 없답니다. .. !<br />
+    <br />
+    <img src="Image/5_9.png" /><br />
+    <br />
+    실행 결과랍니다. .. !<br />
+    이제 Controller에서 View로 데이터를 넘기는 방법을 아셨지요 .. ?<br />
+    곧 11강부터 Model에 대해서 다룰 것인데 그때는 인텔리센스도 보실 수 있을 것이랍니다.<br />
+    <br />
+    <img src="Image/5_10.png" /><br />
+    <br />
+    <br />
+    질문1:  ViewData, ViewBag을 자바스크립트 안에서 사용할수 있나요?<br />
+            예) var dataTest = ViewData["test"];<br />
+    <br />
+    답 : 불가능합니다. <br />
+         대신 html 태그에 data-custom 속성을 넣고 데이터를 넣으시면 자바스크립트에서 뽑아서 사용할 수 있겠죠 <br />
+
+
+
+
+</body>
+</html>

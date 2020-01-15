@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewBag.Title = "Example";
+}
+
+@model MVCExample.Models.Node
+    @{ 
+        ViewBag.Title = "Example";
+        Layout = "~/views/Shared/_Layout.cshtml";
+    }
+
+<h2>Example</h2>
+<div>@Model.Data</div>
+<div>@ViewBag.Data</div>

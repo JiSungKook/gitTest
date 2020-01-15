@@ -1,0 +1,24 @@
+﻿@model IEnumerable<MVCExample.Models.Person>
+
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Index</title>
+</head>
+<body>
+    @foreach (var item in Model)
+    {
+        <p>@item.Name</p>
+        <p>@item.Age</p>
+        <p>@item.Sex</p>
+        <p>@item.Region</p>
+        <hr />
+    }
+
+</body>
+
+</html>

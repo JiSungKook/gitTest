@@ -1,0 +1,47 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index16</title>
+    <style type="text/css">
+        h3{background-color:orange; text-align:center;}
+    </style>
+    @*<script type="text/ecmascript" src="~/Scripts/jquery-1.10.2.js"></script>*@
+    <script type="text/javascript" src="~/Scripts/jquery-1.10.2.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $("h3").click(whenH3Click)
+        });
+
+        function whenH3Click()
+        {
+            $.getJSON("/Rint/GetJsonPerson16", null, function (json) {
+                //document.getElementById("myH").innerHTML = json;
+
+                var willOut = "";
+                for (var i in json)
+                {
+                    willOut += json[i]["Name"] + " : " + i + "<br/>"
+                }
+                document.getElementById("myH").innerHTML = willOut;
+            });
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>RintIanTta ASP.NET MVC Lesson</h1>
+        <h2>with Ajax</h2>
+        <h3>Click it</h3>
+        <hr />
+        <h1 id="myH"></h1>
+    </header>
+</body>
+</html>

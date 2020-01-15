@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <br />
+    오늘 알아볼 것은 @입니다. 그 이외에도 간단하게 몇 가지를 살펴 볼 것이랍니다.<br />
+    <br />
+    <img src="Image/8_0.png" /><br />
+    <br />
+    우선 @{}이 있습니다. 이 안에는 C# 코드를 적을 수 있답니다 .. !<br />
+    다음과 같이 리스트를 만들어 줄 수 있어요 .. !<br />
+    <br />
+    <img src="Image/8_1.png" /><br />
+    <br />
+    이렇게 그냥 쓰듯이 쓰시면 됩니다.<br />
+    <br />
+    <img src="Image/8_2.png" /><br />
+    <br />
+    지난번에 잠깐 배운 『@Html』인데요.<br />
+    오늘은 ListBox를 사용해보도록 하겠습니다. ㅎㅎ<br />
+    <br />
+    <img src="Image/8_3.png" /><br />
+    <br />
+    다음과 같이 @{}안에서 만든 리스트가 들어갔지요 .. ?!<br />
+    <br />
+    <img src="Image/8_4.png" /><br />
+    <br />
+    이어서 간단하게 조금 더 다른 것을 알아보겠습니다. 'ㅁ'<br />
+    지난시간에 배운 것 잠깐 응용이라고 할 수 있겠지요.<br />
+    <br />
+    <br />
+    스타일 태그를 잠시 형성해 볼게요.<br />
+    <br />
+    <img src="Image/8_5.png" /><br />
+    <br />
+    그리고 select에 width:100%를 주었답니다.<br />
+    "에, select태그는 뭔가요 .. ?"<br />
+    『@Html.ListBox()를 쓰시면 select 태그가 만들어져요.』<br />
+    "... 그걸 어떻게 알아요 ㅇㅅㅇ..."<br />
+    <br />
+    <img src="Image/8_6.png" /><br />
+    <br />
+    그건 실행한 뒤 소스를 보시면 됩니다.<br />
+    "...."<br />
+    『그건 조금 그렇죠 ㅇㅅㅇ .. ?!』<br />
+    <br />
+    <img src="Image/8_7.png" /><br />
+    <br />
+    그러니 그냥 다음과 같이 클래스를 주시면 됩니다.<br />
+    new { }는 지난 강의에서 잠시 살펴보았을겁니다. ㅎㅎ<br />
+    <br />
+    <img src="Image/8_8.png" /><br />
+    <br />
+
+</body>
+</html>
+<!--@{
+    소스코드..
+    Layout = null;
+    List<SelectListItem>
+    ListItemList = new List<SelectListItem>
+        ()
+        {
+        new SelectListItem() { Text = "A", Value = "A"},
+        new SelectListItem() { Text = "B", Value = "B"},
+        new SelectListItem() { Text = "C", Value = "C"},
+        new SelectListItem() { Text = "D", Value = "D"},
+        new SelectListItem() { Text = "E", Value = "E"},
+        new SelectListItem() { Text = "F", Value = "F"}
+        };
+        }
+        <!DOCYTYPE html>
+        <html>
+        <head>
+            <title>Index</title>
+            <style type="text/css">
+                .listBox {
+                    width: 100%;
+                }
+            </style>
+        </head>
+        <body>
+            <div>
+                <h1>Ji ASP.NET MVC</h1>
+                <h2>Basic</h2>
+                <hr />
+                @*@Html.ListBox("myListBox", ListItemList)*@
+                @Html.ListBox("myListBox", ListItemList, new { Class="listBox"})
+            </div>
+        </body>
+    </html>-->
